@@ -1,0 +1,23 @@
+create table if not exists users
+(login varchar(50), 
+pass varchar(50), 
+nick varchar(50));
+
+insert into users (login, pass, nick)
+values ('login1', 'pass1', 'nick1');
+
+insert into users (login, pass, nick)
+values ('login2', 'pass2', 'nick2');
+
+insert into users (login, pass, nick)
+values ('login3', 'pass3', 'nick3');
+
+insert into users (login, pass, nick)
+values ('admin', 'admin', 'admin');
+
+
+CREATE TABLE blacklist 
+(id_user INT PRIMARY KEY NOT NULL, id_blacklist_user REFERENCES main (id) NOT NULL);
+
+insert into users (login, pass, nick)
+values ('login1', 'pass1', 'nick1');
